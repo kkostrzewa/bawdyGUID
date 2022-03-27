@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 
 import re
+from urllib.request import urlopen
 from english_words import english_words_lower_alpha_set
+
+# read the cursed words
+badWords = {ii.decode('utf-8').strip() for ii in urlopen("https://www.cs.cmu.edu/~biglou/resources/bad-words.txt")}
+
+lcEnglishWordsWithCurses = badWords | english_words_lower_alpha_set
 
 # 1337 subs, from https://nedbatchelder.com/text/hexwords.html
 sub1337 = [
@@ -49,7 +55,7 @@ def addWords(cwords, lenAvail):
         return False
 
     wordsAdded = False
-    for word in english_words_lower_alpha_set:
+    for word in lcEnglishWordsWithCurses:
         for gword in guidify(word):
             if len(gword) <= lenAvail:
                 wordsAdded = True
