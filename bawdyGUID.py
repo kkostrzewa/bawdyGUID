@@ -71,8 +71,10 @@ def processGuidSentence(cwords):
     # are gword boundries aligned with GUID -'s (found at positions 8, 12, 16, 20)?
     bpos = 0    # word break position
     guidDashPos = [8, 12, 16, 20]   # GUID dash positions
+    hasBadWords = False
     for ii in cwords:
         bpos += len(ii['gword'])
+        hasBadWords |= ii['word'] in badWords
         if len(guidDashPos) == 0:   # we have a winner!
             break
         elif bpos > guidDashPos[0]: # we overlapped a -. sorry
@@ -88,7 +90,8 @@ def processGuidSentence(cwords):
         'words': ' '.join([ii['word'] for ii in cwords]),
         'wordCount': len(cwords),
         'zfill': len(m[0])!=32,
-        'dashAligned': dashAligned
+        'dashAligned': dashAligned,
+        'hasBadWords': hasBadWords,
     }
     print(out)
 
