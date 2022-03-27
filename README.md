@@ -13,7 +13,7 @@ flowchart TD
 ```
 
 ## references
-- Uses code from https://nedbatchelder.com/text/hexwords.html
+- Uses code from https://nedbatchelder.com/text/hexwords.html. Inspired by that project too.
 - Uses [cursed words](https://southparkstudios.mtvnimages.com/images/south_park/episode_thumbnails/s05e02_720.jpg?width=285) from https://www.cs.cmu.edu/~biglou/resources/bad-words.txt
 
 ## notes
