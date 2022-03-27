@@ -12,6 +12,10 @@ flowchart TD
     addWords --> processGuidSentence
 ```
 
+## references
+- Uses code from https://nedbatchelder.com/text/hexwords.html
+- Uses [cursed words](https://southparkstudios.mtvnimages.com/images/south_park/episode_thumbnails/s05e02_720.jpg?width=285) from https://www.cs.cmu.edu/~biglou/resources/bad-words.txt
+
 ## notes
 - guid word sounds like squidward. that's a feature.
 - it's pronounced [gwid, not goo-id](https://docs.google.com/forms/d/1YV-fP7hhEUssx-u9o1hlI9o7Lljy5dRkf7hvEyO2t0Y). fight me. 
