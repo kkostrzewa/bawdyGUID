@@ -1,6 +1,8 @@
 # bawdyGUID
 Python script to generate GUIDs with words, looking for bawdy text. Also an excuse to kick the tires on python. An uninterrupted run is **s** to the **l** to the **o** to the **w**.
 
+My motiviation was to algorithmically find the perfect GUID (or GUIDs), akin to the perfect 32 bit hex value, **0xdeadbeef**.
+
 ## installing
 - python 3
 - `pip install english_words alive_progress`
